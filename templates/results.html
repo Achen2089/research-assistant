@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Assistant - Results</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Research Results for "{{ query }}"</h1>
+    <div id="spinner" class="spinner-border text-primary" role="status" style="display: none; width: 5rem; height: 5rem; margin-top: 4rem; margin-left: auto; margin-right: auto; text-align: center;">
+        <span class="sr-only">Loading...</span>
+    </div>
+    {% if results %}
+    <div class="row">
+    {% for result in results %}
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ result.title }}</h5>
+                    <p class="card-text"> <b>Published Date:</b> {{ result.date }}</p>
+                    <p class="card-text"> <b>URL:</b> {{ result.url }}</p>
+                    <b>APA Citation</b>
+                    <p class="card-text">{{ result.citation }}</p>
+                    <b>Summary</b>
+                    <p class="card-text">{{ result.summary }}</p>
+                    <a href="/?query={{ result.title }}" class="btn btn-primary" onsubmit="showSpinner()">Find Similar</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {% else %}
+    <p class="alert alert-warning">No results found for your query.</p>
+    {% endif %}
+
+    <a href="/" class="btn btn-primary mt-4" style="font-size: 20px; display: block; margin: 0 auto;">New Search</a>
+</div>
+<script>
+    function showSpinner() {
+        document.getElementById("spinner").style.display = "block";
+    }
+</script>
+</body>
+</html>

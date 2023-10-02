@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Assistant</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        input[type="text"] {
+            font-size: 36px;
+            margin-top: 2rem;
+        }
+        button[type="submit"] {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 mb-3">AI Research Assistant</h1>
+    <p class="text-secondary">Enter your research topic in the search bar below and click the "Search" button to get the most up to date resources on that topic.</p>
+    <form action="/" method="post" onsubmit="showSpinner()">
+        <div class="form-group">
+            <input type="text" class="form-control" name="query" placeholder="Enter your research topic">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+        <div id="spinner" class="spinner-border text-primary" role="status" style="display: none; width: 5rem; height: 5rem; margin-top: 4rem; margin-left: auto; margin-right: auto; text-align: center;">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </form>
+</div>
+<script>
+    function showSpinner() {
+        document.getElementById("spinner").style.display = "block";
+    }
+</script>
+</body>
+</html>

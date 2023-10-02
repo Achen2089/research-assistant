@@ -7,10 +7,10 @@ This is a Flask web application that uses the Metaphor API and GPT to help users
 To install the app, follow these steps:
 
 - Clone the repository to your local machine.
-- Install the necessary dependencies by running pip install -r requirements.txt.
-- Set the environment variables OPENAI_API_KEY and METAPHOR_API_KEY to your OpenAI and Metaphor API keys, respectively.
+- Install the necessary dependencies by running `pip install -r requirements.txt`.
+- Set the environment variables `OPENAI_API_KEY` and `METAPHOR_API_KEY` to your OpenAI and Metaphor API keys, respectively.
 - Enter into venv if needed.
-- Start the development server by running python app.py.
+- Start the development server by running `python -m flask --app app run`.
 
 To use the app, follow these steps:
 

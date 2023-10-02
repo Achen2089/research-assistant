@@ -23,8 +23,7 @@ To use the app, follow these steps:
 
 ## Demo
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/ee39a637f7bb4f3baa12f69f5a12af1f?sid=0416b8ca-ebe9-4c74-97c2-90bcd7a19bf0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
+A Link to a demo of the app can be found [here](https://
 ## Additional Features
 
 - Add a more button to the results page to append and search for more results.
